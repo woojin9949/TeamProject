@@ -107,7 +107,7 @@ footer{
 </head>
 <body>
 
-<div id="page"></div>
+<div id="page">
 
   <header>
     <div id="logo">
@@ -134,13 +134,13 @@ footer{
       <div class="site-section">
         <div class="container">
           <div style="text-align: center;">
-            <button onclick="location.href='hosikdang'">호식당</button >
+            <button type="button" class="btn btn-primary">호식당</button>
             <button type="button" class="btn btn-success">돈불 석쇠 불고기</button>
             <button type="button" class="btn btn-info">알촌</button>
             <button type="button" class="btn btn-info">레볼루션</button>
             <button type="button" class="btn btn-dark">콩쭈 쭈꾸미</button>
 
-            <div id="map" style="width:800px; height:400px;"></div>
+            <div id="map" style="width:800px;height:400px;"></div>
 
             <script>
 var mapOptions = {
@@ -149,23 +149,24 @@ var mapOptions = {
 };
 
 var map = new naver.maps.Map('map', mapOptions);
-var mapLocation = new naver.maps.LatLng(37.270197, 127.126007);
+var mapLocation = new naver.maps.LatLng(37.271392, 127.122410);
 map.setCenter(mapLocation);
 var marker = new naver.maps.Marker({
-    position: new naver.maps.LatLng(37.270197, 127.126007),
-     title: '강남대학교역 입구',
+    position: new naver.maps.LatLng(37.271392, 127.122410),
+     title: '호식당',
     map: map
 });
 
 var contentString = [
     '<div class="iw_inner">',
-    '   <h3>강남대학교역 입구</h3>',
-    '   <p>주소: 우편번호 16979 경기도 용인시 기흥구 강남로 40(구갈동 111) 강남대학교<br>',
-    '       <img src="img/knu.jpg" width="30" height="30" alt="강남대학교역" class="thumb" /><br>',
+    '   <h3>호식당</h3>',
+    '   <p>주소: 경기 용인시 기흥구 강남로 7 아트프라자 108호<br>',
+    '       <img src="img/knu.jpg" width="30" height="30" alt="호식당" class="thumb" /><br>',
     '        <br>',
     '     </p>',
     '</div>'
 ].join('');
+
 var infowindow = new naver.maps.InfoWindow({
     content: contentString
 });
