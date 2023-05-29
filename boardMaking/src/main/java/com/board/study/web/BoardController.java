@@ -30,44 +30,52 @@ public class BoardController {
 		model.addAttribute("data", "hello!!");
 		return "board/hello";
 	}
+
 	@GetMapping("/company")
 	public String company() {
 		return "/board/company";
 	}
+
 	@GetMapping("/map")
 	public String map() {
-		//길찾기 페이지 넘김
+		// 길찾기 페이지 넘김
 		return "board/map";
 	}
+
 	@GetMapping("/hosikdang")
 	public String hosikdang() {
 		return "/board/hosikdang";
 	}
+
 	@GetMapping("/knu")
 	public String redirectKnu() {
 		return "redirect:https://web.kangnam.ac.kr/";
 	}
+
 	@GetMapping("/naver")
 	public String redirectNaver() {
-		//인증 관련 코드(네이버)
+		// 인증 관련 코드(네이버)
 		return "redirect:https://www.naver.com";
 	}
+
 	@GetMapping("/facebook")
 	public String redirectFacebook() {
-		//인증 관련 코드 (페이스북)
+		// 인증 관련 코드 (페이스북)
 		return "redirect:https://www.facebook.com";
 	}
+
 	@GetMapping("/google")
 	public String redirectGoogle() {
-		//인증 관련 코드 (구글)
+		// 인증 관련 코드 (구글)
 		return "redirect:https://www.google.co.kr";
 	}
+
 	@GetMapping("/kakao")
 	public String redirectKakao() {
-		//인증 관련 코드 (카카오)
+		// 인증 관련 코드 (카카오)
 		return "redirect:https://www.daum.net";
 	}
-	
+
 	@GetMapping("/board/list") // GET 방식 사용 정보 가져와서 조회하기 위함
 	public String getBoardListPage(Model model, @RequestParam(required = false, defaultValue = "0") Integer page,
 			@RequestParam(required = false, defaultValue = "5") Integer size) throws Exception {

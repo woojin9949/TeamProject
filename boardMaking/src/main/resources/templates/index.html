@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Test Page</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" charset="UTF-8">
+</head>
+<body>
+	Login Please
+	<a href="/company">Finish</a>
+	<a href="/facebook"><img src="img/facebookLogo.png" width="50" height="50"></a>
+	<a href="https://accounts.google.com/o/oauth2/v2/auth?
+					client_id=194145741373-025mrftl057o72p96u162ppmibk1kniq.apps.googleusercontent.com
+					&redirect_uri=http://localhost:8080/login/oauth2/code/google
+					&response_type=code
+					&scope=email%20profile
+					&access_type=offline"><img src="img/btn_google_login.png" ></a>
+	<a href="https://kauth.kakao.com/oauth/authorize
+?client_id=b9bfae0b7d3aa7358e9431fd08904d5c
+&redirect_uri=http://localhost:8080/auth/kakao/callback
+&response_type=code"><img src="img/kakao_login_button.png" ></a>
+	<a href="/naver"><img src="img/Naver.png" width="50" height="50"></a>
+</body>
+</html>
