@@ -86,13 +86,12 @@ footer{
 		</div>
 
 		<div id="top_menu">
-			<a href="/company">HOME</a> |
-			<a href="/index">LOGIN</a>
+			<a href="/">HOME</a> |
 		</div>
 
 		<nav>
 			<ul>
-				<li><a href="/company">Main</a></li>
+				<li><a href="/main">Main</a></li>
 				<li><a href="/map">Map</a></li>
 				<li><a href="/board/list">Forum Board</a></li>
 			</ul>
@@ -116,7 +115,7 @@ footer{
 			</div>
 			<div class="mb-3">
 			    <label for="exampleInputEmail1" class="form-label">Writer.</label>
-			    <input type="text" class="form-control" id="" name="registerId">
+			    <input type="text" class="form-control" id="" name="registerId" th:value="${session.kakaoName != null ? session.kakaoName : session.googleName}"readonly>
 			</div>
 			<button type="button" class="btn btn-success" onclick="javascript:location.href='/board/list'">Previous</button>
 			<button type="submit" class="btn btn-primary">Submit</button>

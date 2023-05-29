@@ -41,7 +41,8 @@
 			<!-- Reply 구현 끝 -->
 			<div>
 				<p>
-					<label>댓글 작성자</label> <input type="text" name="writer">
+    				<label>댓글 작성자</label>
+    					<input type="text" name="writer" th:value="${session.kakaoName != null ? session.kakaoName : session.googleName}" readonly>
 				</p>
 				<p>
 					<textarea rows="5" cols="50" name="rcontent"></textarea>

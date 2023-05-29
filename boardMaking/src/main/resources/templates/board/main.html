@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Company</title>
+    <title>Main Page</title>
 <style>
     *{margin: 0px; padding: 0px;}
 ul{list-style: none;} /* 리스트 앞에 . 같은거 제거*/
@@ -81,15 +81,15 @@ footer{
         <div id="logo">
             <a href="/knu"><img src="img/knu.jpg" width="80" height="80"> </a>
         </div>
-
         <div id="top_menu">
-            <a href="/company">HOME</a> |
-            <a href="/index">LOGIN</a>
+        	<!-- 사용자 :<a th:text="${name}"></a>  |-->
+        	<a th:text="${user}"></a>
+            <a href="/">HOME</a>
         </div>
 
         <nav>
             <ul>
-                <li><a href="/company">Main</a></li>
+                <li><a href="/main">Main</a></li>
                 <li><a href="/map">Map</a></li>
                 <li><a href="/board/list">Forum Board</a></li>
             </ul>

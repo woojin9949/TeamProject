@@ -5,7 +5,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div>Kakao<span th:text="${name}"></span></div>
-<div>Google<span th:text="${user}"></span></div>
+<h2>
+    <span th:if="${session.kakaoName != null}">Kakao로그인 완료:<span th:text="${session.kakaoName}"></span>님 환영합니다</span>
+</h2>
+<h2>
+    <span th:if="${session.googleName != null}">Google로그인 완료:<span th:text="${session.googleName}"></span>님 환영합니다 </span>
+</h2>
+<div><span th:text="${user}"></span></div>
+<a href="/main">메인 페이지로 넘어가기</a>
 </body>
 </html>

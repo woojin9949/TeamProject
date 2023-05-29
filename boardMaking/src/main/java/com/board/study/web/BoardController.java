@@ -31,10 +31,12 @@ public class BoardController {
 		return "board/hello";
 	}
 
-	@GetMapping("/company")
-	public String company() {
-		return "/board/company";
-	}
+	@GetMapping("/main")
+    public String main(@RequestParam(value = "name" , required = false) String name, Model model) {
+        // 받은 name 값을 모델에 추가하여 view로 전달
+        model.addAttribute("name", name);
+        return "board/main";
+    }
 
 	@GetMapping("/map")
 	public String map() {
