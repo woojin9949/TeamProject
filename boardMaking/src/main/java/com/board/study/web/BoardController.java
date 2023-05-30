@@ -25,18 +25,10 @@ public class BoardController {
 	@Inject
 	private ReplyService replyService;
 
-	@GetMapping("/hello")
-	public String hello(Model model) {
-		model.addAttribute("data", "hello!!");
-		return "board/hello";
-	}
-
 	@GetMapping("/main")
-    public String main(@RequestParam(value = "name" , required = false) String name, Model model) {
-        // 받은 name 값을 모델에 추가하여 view로 전달
-        model.addAttribute("name", name);
-        return "board/main";
-    }
+	public String main() {
+		return "board/main";
+	}
 
 	@GetMapping("/map")
 	public String map() {
@@ -52,30 +44,6 @@ public class BoardController {
 	@GetMapping("/knu")
 	public String redirectKnu() {
 		return "redirect:https://web.kangnam.ac.kr/";
-	}
-
-	@GetMapping("/naver")
-	public String redirectNaver() {
-		// 인증 관련 코드(네이버)
-		return "redirect:https://www.naver.com";
-	}
-
-	@GetMapping("/facebook")
-	public String redirectFacebook() {
-		// 인증 관련 코드 (페이스북)
-		return "redirect:https://www.facebook.com";
-	}
-
-	@GetMapping("/google")
-	public String redirectGoogle() {
-		// 인증 관련 코드 (구글)
-		return "redirect:https://www.google.co.kr";
-	}
-
-	@GetMapping("/kakao")
-	public String redirectKakao() {
-		// 인증 관련 코드 (카카오)
-		return "redirect:https://www.daum.net";
 	}
 
 	@GetMapping("/board/list") // GET 방식 사용 정보 가져와서 조회하기 위함

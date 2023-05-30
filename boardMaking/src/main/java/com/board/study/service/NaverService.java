@@ -96,11 +96,11 @@ public class NaverService {
 			System.out.println("response body : " + result);
 
 			JsonElement element = JsonParser.parseString(result);
-
+			
 //			Long id = element.getAsJsonObject().get("id").getAsLong();
-//			nickname = element.getAsJsonObject().get("response").getAsJsonObject().get("nickname").getAsString();
+			nickname = element.getAsJsonObject().get("response").getAsJsonObject().get("nickname").getAsString();
 //			System.out.println("id : " + id);
-//			System.out.println("name: "+ nickname);
+			System.out.println("name: "+ nickname);
 			br.close();
 			} catch (IOException e) {
 			e.printStackTrace();

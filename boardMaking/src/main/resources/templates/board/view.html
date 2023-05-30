@@ -42,7 +42,7 @@
 			<div>
 				<p>
     				<label>댓글 작성자</label>
-    					<input type="text" name="writer" th:value="${session.kakaoName != null ? session.kakaoName : session.googleName}" readonly>
+    					<input type="text" name="writer" th:value="${session.naverName != null ? session.naverName : (session.kakaoName != null ? session.kakaoName : session.googleName)}" readonly>
 				</p>
 				<p>
 					<textarea rows="5" cols="50" name="rcontent"></textarea>

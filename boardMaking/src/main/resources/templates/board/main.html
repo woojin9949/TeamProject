@@ -82,8 +82,8 @@ footer{
             <a href="/knu"><img src="img/knu.jpg" width="80" height="80"> </a>
         </div>
         <div id="top_menu">
-        	<!-- 사용자 :<a th:text="${name}"></a>  |-->
-        	<a th:text="${user}"></a>
+        	
+        	<a th:text="${session.naverName != null ? session.naverName : (session.kakaoName != null ? session.kakaoName : session.googleName)}" ></a>님 환영합니다!!
             <a href="/">HOME</a>
         </div>
 
